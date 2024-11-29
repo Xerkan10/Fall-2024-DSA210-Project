@@ -62,7 +62,7 @@ To retrieve my personal data:
    - I will analyze the correlation between match duration and performance metrics or win/loss outcomes.
 
 5. **Does the number of games played in one sitting affect my performance or match result?**  
-   - I will explore the relationship between the number of games played in a single session and my overall performance.
+   - I will explore the relationship between the number of games played in a single session(in one seat) and my overall performance.
 
 6. **Do starting time and date of matches affect my performance?**  
    - I will investigate how match timestamps influence my performance. For example:
@@ -77,9 +77,9 @@ This project stems from my curiosity to understand my gaming patterns and improv
 ---
 
 ## **Tools and Methodology**
-- **Programming Languages:** Python
-- **Data Retrieval:** Steam Web API, Official Dota 2 API, and Selenium for web scraping.
-- **Data Processing and Analysis:** Pandas and Matplotlib for data manipulation and visualization.
+- **Programming Languages:** Python, Jupyter Notebook
+- **Data Retrieval:** Steam Web API, Official Dota 2 API, Selenium and Beatiful Soup for web scraping.
+- **Data Processing and Analysis:** Pandas, NumPy and Matplotlib for data manipulation and visualization.
 - **Security:** API keys are stored securely and not shared publicly.
 
 ---
