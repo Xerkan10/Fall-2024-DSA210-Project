@@ -21,6 +21,7 @@ This project focuses on analyzing my personal Dota 2 gaming data to uncover patt
   - Player performance metrics:  
     - Kills, deaths, assists, gold per minute, XP per minute, last hits(killing enemy creeps), denies(killing friendly creeps), net worth(total gold gain throught the game), level, and team assignment.
 
+
 ### **2. General Game Information**
 - **Source:** Official Dota 2 API  
 - **Endpoints:**  
@@ -31,7 +32,15 @@ This project focuses on analyzing my personal Dota 2 gaming data to uncover patt
   - **Heroes:**  
     ```
     https://www.dota2.com/datafeed/herolist?language=English
-    ```  
+    ```
+- **Collected Data**
+  - **Items Data**:
+    - Includes details about in-game items, such as item IDs, item names, item descriptions and properties.
+    - Useful for identifying the items purchased in matches.
+  - **Heroes Data**:
+    - Includes details about in-game heroes, such as hero IDs, hero names, hero abilities and other characteristics.
+    - Useful for analyzing hero roles and their impact on gameplay.
+    
 ### **3. Hero Characteristics**
 - **Source:** Web scraping the Dota 2 website using Selenium.  
 - **Collected Data:**  
