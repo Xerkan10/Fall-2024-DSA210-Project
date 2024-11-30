@@ -64,7 +64,7 @@ To retrieve my personal data:
 
 ## **Research Questions**
 1. **Which type of heroes are best for me?**  
-   - I will analyze the role distribution of heroes I play and compare my performance statistics across these roles to identify patterns and draw conclusions. Further more, I will create a _machine learning model(regression)_ in order to predict my performance on unplayed heroes.
+   - This is the main research question for now. I will analyze the role distribution of heroes I play and compare my performance statistics across these roles to identify patterns and draw conclusions. Further more, I will hopefully create a _machine learning model(regression)_ in order to predict my performance on unplayed heroes.
 
 2. **Do I respect my role distribution in terms of my in-game item preferences?**  
    - I will evaluate if my item choices align with the roles assigned to the heroes I play.
