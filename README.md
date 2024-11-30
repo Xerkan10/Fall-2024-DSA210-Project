@@ -19,14 +19,19 @@ This project focuses on analyzing my personal Dota 2 gaming data to uncover patt
   - General match details:  
     - Duration, start time/date, winning team, game mode, total kills for both teams, tower status for both teams, match sequence number.
   - Player performance metrics:  
-    - Kills, deaths, assists, gold per minute, XP per minute, last hits, denies, net worth, level, and team assignment.
+    - Kills, deaths, assists, gold per minute, XP per minute, last hits(killing enemy creeps), denies(killing friendly creeps), net worth(total gold gain throught the game), level, and team assignment.
 
 ### **2. General Game Information**
 - **Source:** Official Dota 2 API  
 - **Endpoints:**  
-  - Items: [https://www.dota2.com/datafeed/itemlist?language=English](https://www.dota2.com/datafeed/itemlist?language=English)  
-  - Heroes: [https://www.dota2.com/datafeed/herolist?language=English](https://www.dota2.com/datafeed/herolist?language=English)
-
+  - **Items:**  
+    ```
+    https://www.dota2.com/datafeed/itemlist?language=English
+    ```
+  - **Heroes:**  
+    ```
+    https://www.dota2.com/datafeed/herolist?language=English
+    ```  
 ### **3. Hero Characteristics**
 - **Source:** Web scraping the Dota 2 website using Selenium.  
 - **Collected Data:**  
@@ -50,7 +55,7 @@ To retrieve my personal data:
 
 ## **Research Questions**
 1. **Which type of heroes are best for me?**  
-   - I will analyze the role distribution of heroes I play and compare my performance statistics across these roles to identify patterns and draw conclusions.
+   - I will analyze the role distribution of heroes I play and compare my performance statistics across these roles to identify patterns and draw conclusions. Further more, I will create a _machine learning model(regression)_ in order to predict my performance on unplayed heroes.
 
 2. **Do I respect my role distribution in terms of my in-game item preferences?**  
    - I will evaluate if my item choices align with the roles assigned to the heroes I play.
@@ -79,7 +84,8 @@ This project stems from my curiosity to understand my gaming patterns and improv
 ## **Tools and Methodology**
 - **Programming Languages:** Python, Jupyter Notebook
 - **Data Retrieval:** Steam Web API, Official Dota 2 API, Selenium and Beatiful Soup for web scraping.
-- **Data Processing and Analysis:** Pandas, NumPy and Matplotlib for data manipulation and visualization.
+- **Data Processing and Analysis:** Pandas, NumPy, Seaborn and Matplotlib libraries for data manipulation and visualization.
+- **Machine Learning:** Scikit-learn library and all data processing and visualization tools mentioned above.
 - **Security:** API keys are stored securely and not shared publicly.
 
 ---
