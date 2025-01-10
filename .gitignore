@@ -1,0 +1,11 @@
+data/hero_images
+data/parsed_data
+data/raw_data
+data/visualization_purposes
+hero_average_performance.csv
+heroes_info.csv
+hero_win_percentages.csv
+hero_matches.csv
+hero_matches.json
+constants.py
+venv
