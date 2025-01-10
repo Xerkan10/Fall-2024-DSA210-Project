@@ -25,6 +25,11 @@ This project stems from my curiosity to understand my gaming patterns and improv
     - Duration, start time/date, winning team, game mode, total kills for both teams, tower status for both teams, match sequence number.
   - Player performance metrics:  
     - Kills, deaths, assists, gold per minute, XP per minute, last hits(killing enemy creeps), denies(killing friendly creeps), net worth(total gold gain throught the game), level, and team assignment.
+- **Methodology:**
+  - Data extraction part:
+    - I collect my match data with the api calls using request libarary and then save them in json files.
+  - Data proccessing part:
+    - I open json files and parse my matches into csv files by keeping important information about game stats.
 
 ---
 
@@ -39,12 +44,33 @@ This project stems from my curiosity to understand my gaming patterns and improv
   - **Heroes Data**:
     - Includes hero IDs, hero names.
     - Useful for mapping hero IDs from my matches to hero names.
-    
+
+---
+
 ### **3. Hero Characteristics(heroes.ipynb)**
 - **Source:** Web scraping the Dota 2 website using Selenium.  
 - **Collected Data:**  
   - Role distribution for each hero (carry, support, disabler, etc.), active skill count of heroes, hero attribute(strength, agility, intelligence, universal), attack range(melee or ranged) and hero images.  
   - This data is used to form a performance metric based on hero roles. Hero images are used just for visualization purposes.
+- **Methodology:**
+  - Web scrapping:
+    - Since there is multiple hero pages, I use sellenium to interact with every page and scroll down to relevant information.
+ 
+---
+
+ ### **4. Random Matches For Every Hero(heroes.ipynb)**
+- **Source:** Steam Web API  
+- **Endpoint:**  
+  ```
+  https://api.steampowered.com/IDOTA2Match_570/GetMatchHistoryBySequenceNum/v1/?key={API_KEY}&start_at_match_seq_num={match_seq_num}
+  ```
+- **Collected Data:**  
+  - I collected 150 random matches for every hero to create a average performance metric.
+- **Methodology:**
+  - Data extraction part:
+    - I collect match data with the api calls using "request" libarary and then save them in json files.
+  - Data proccessing part:
+    - I open json files and parse matches into csv files using "pandas" library for keeping important information about game stats.
 
 ---
 
@@ -125,6 +151,19 @@ To retrieve my personal data:
    - **Interpretation of results**
       - For tower_damage prediction task, we get log MSE=0.4084544279414639 which is smaller than 0.5. This is a good indication of performance. But R^2 score of 0.4912709308532357 is low which suggests that the model can't explain well the variability in target variable.
       - For hero_damage prediction task, we get log MSE=0.002229542990831553 which is smaller than 0.5. This is a really good indication of performance clearly better than tower_damage predictions. This might happen because there is better representatives of hero_damage in feature like kills, assists and performance. We get R^2 score of 0.7706174336317602 which is not bad.
+
+---
+
+## **Limitations & Future Work**
+- **Limitations**
+  - Creating a "real" average performance metric for every hero is very computationaly costly. That's why I had to get 150 matches per hero.
+  - My dataset is really small, that's why there are some limitation related to dataset size for this project.
+  - I was planning to something related to in-game item preferences but there was no place to find labels of items for hero roles(like: carry item, support item...).
+
+- **Future Work**
+  - With increasing dataset, I think the project will be more meaningfull.
+  - I want to perform some test which measure the relation between active skills(skill of a hero that can be casted within keyboard, passive skills are not castable) and performance. The general idea is that, more the active skills, harder to play that hero.
+  - Maybe using unsupervisod learning, I can cluster items based on similarities. This can be done by creating tf-idf matrices. I can perform text analysis on explanation of items. Some keywords(like healing, damage, strength) can be critical do classify them.
 
 ---
 
