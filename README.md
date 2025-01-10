@@ -107,6 +107,9 @@ To retrieve my personal data:
    - I performed chi-squared test to find out relation between session match number and performance. Null hypothesis suggests that they are independent while alternative hypothesis suggests that they're dependent. **Results**: *p-value* is 0.9046410925944919, which is greater than 0.05, so we fail to reject null hypothesisi.
    ![Performance Label-Match Number Bar Chart](data/visuals/performance_label_session_match_number_bar_chart.png "Performance Label-Match Number Bar Chart")
 
+   - This the visualization of average performance-session match number:
+   ![Performance Label-Match Number Bar Chart](data/visuals/average_performance_session_match_number_trend.png "Performance Label-Match Number Bar Chart")
+
 
 ---
 
