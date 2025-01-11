@@ -96,7 +96,7 @@ To retrieve my personal data:
 
    - Performed mean comparison test using t-test to find out if win percentage distribution for ally has higher mean than mean of distribution of enemy heroes. Null hypothesis suggests that their mean is equal while alternative hypothesis suggests that mean of allies is greater. **Results**: *p-value* is 0.0000, which is smaller than 0.05, so we reject null hypothesis, we accept alternative hypothesis.
    - Performed variance comparison test using f-test to find out variability comparison in win percentage distribution of allies and win percentage distribution enemies. Null hypothesis suggests that their variance is equal while alternative hypothesis suggests that mean of allies is greater. **Results**: *p-value* is 0.0221, which is smaller than 0.05, so we reject null hypothesi, we accept alternative hypothesis.
-   ![Ally-Enemy Win Percentage Violin](data/visuals/match_counts_violin_plot.png "Ally-Enemy Win Percentage Violin")
+   ![Ally-Enemy Win Percentage Violin](data/visuals/win_percentages_violin_plot.png "Ally-Enemy Win Percentage Violin")
 
    - Just for fun, I visualized win rates of most wanted allies! (Selected allies with at least 5 match)
    ![Most Wanted Allies Bar Chart](data/visuals/wanted_heroes_bar_chart.png "Most Wanted Allies Bar Chart")
